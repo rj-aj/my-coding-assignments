@@ -1,0 +1,33 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family: sans-serif;
+}
+
+#wrapper{
+    width: 970px;
+    margin: 0px auto;
+    background-color: #245176;
+    color:white;
+}
+
+#top-nav{
+    padding: 15px;
+}
+
+#header img{
+    width: 350px;
+}
+
+#header-right{
+    display: inline-block;
+    margin-left: 245px;
+    text-align: center;
+    vertical-align: top;
+}
+#header-right a{
+    color:#cbad04;
+}
+#header-right span{
+    color: black
+}
