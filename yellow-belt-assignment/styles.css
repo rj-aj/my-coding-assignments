@@ -8,7 +8,7 @@
 
 .wrapper{
     width:1200px;
-    height:1460px;
+    height:auto;
     background-color: #191919;
     border:8px solid #191919;
 
@@ -98,7 +98,7 @@
 /* --- conten area top style -- */
 
     .content-area-top{
-        height:195px;
+        height:185px;
         margin-left:10px;
     }
     .content-area-top li{
@@ -133,13 +133,35 @@
 /* --- content-area-bottom  style  -- */
 
     .content-area-bottom{
-        height: 170px;
-        background-color:black;
+        height: 175px;
+        
+        position:relative;
+        background-image: linear-gradient(-45deg, black 25%, transparent 25%, transparent 50%, black 50%, black 75%, transparent 75%, transparent);
+        background-size: 6px 6px;
+    }
+
+    .content-area-bottom h1{
+        padding: 40px 20px 0px 30px;
+        font-family: "Times New Roman", Georgia, Serif;
+        font-weight: normal;
+    }
+
+    .content-area-bottom p{
+        padding: 10px 50px 10px 30px;
+        font-family: "Times New Roman", Georgia, Serif;
+        font-weight: normal;
+    }
+
+    .content-area-bottom span{
+        position:absolute;
+        right:10px;
+        bottom:5px;
     }
 
 
     .portfolio{
         height:500px;
+        padding:30px 20px 20px 20px;
 
     }
     .portfolio h2{
