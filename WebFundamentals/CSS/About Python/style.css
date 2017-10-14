@@ -31,3 +31,32 @@
 #header-right span{
     color: black
 }
+.nav ul {
+    list-style: none;
+    background-color:#487EAD;
+    padding: 0px;
+    margin: 10px 5px;
+  }
+
+  .nav li {
+    width: 130px;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    padding:10px;
+    font-weight: 1.2 em;
+  }
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+  
+  }
+  .subcontent_top{
+      display:inline-block;
+  }
+  .subcontent_top-left{
+      width:200px;
+  }
+  .subcontent_top-right{
+    width:200px;
+}

@@ -1,32 +1,213 @@
-*{
-    outline: 1px dashed green;
+* {
+    padding:0px;
+	margin:0px;
+	font-family: 	Arial;
 }
-#wrapper{
-    width:970px;
+
+#wrapper {
+    width: 970px;
     margin: 0px auto;
-
 }
 
-header h1, header h2{
-display:inline-block;
-width:45%;
+header h1,
+header h2 {
+    display: inline-block;
+    width: 48%;
 }
 
 #bio {
-    height:250px;
+    height: 370px;
+    padding: 20px;
+    background-color: darkred;
 }
-    #bio img {
-      height:200px;
-      width: auto;
+
+#bio img {
+    height: auto;
+    width: 350px;
+    border: 5px solid lightgrey;
+}
+
+#bio div {
+    display: inline-block;
+    width: 545px;
+    height: 370px;
+    vertical-align: top;
+    margin-left: 20px;
+    background-color: white;
+    background: -webkit-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Safari 5.1- 6.0 */
+    background: -o-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Opera 11.6-12.0 */
+    background: -moz-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Firefox 3.6-15 */
+    background: linear-gradient(to bottom right, #fefefe, #dbcbda); /* Standard syntax */
+  
+}
+
+#bio h3 {
+    margin: 0px;
+    height: 30px;
+    padding: 6px;
+    ;
+    background-color: silver;
+    color: white;
+}
+
+#bio a {
+    padding-left: 10px;
+}
+
+.projects-list {
+    height: 600px;
+    width: 100%;
+    padding:20px 20px;
+    background: -webkit-radial-gradient(#6f5964, #1f0f13); /* Safari 5.1- 6.0 */
+    background: -o-radial-gradient(#6f5964, #1f0f13); /* Opera 11.6-12.0 */
+    background: -moz-radial-gradient(#6f5964, #1f0f13); /* Firefox 3.6-15 */
+    background: radial-gradient(#6f5964, #1f0f13); /* Standard syntax */
+}
+
+.proj-details {
+    
+    width:295px;
+	height: 570px;
+	display : inline-block;
+	background-color: lightgray;
+    vertical-align: top;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    margin-right:15px;
+	background: -webkit-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Safari 5.1- 6.0 */
+  background: -o-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Opera 11.6-12.0 */
+  background: -moz-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Firefox 3.6-15 */
+  background: linear-gradient(to bottom right, #fefefe, #dbcbda); /* Standard syntax */
+    
+}
+
+.proj-details img {
+    height: auto;
+    width: 295px;
+   }
+   
+.proj-details h2 {
+    width: 273;
+     padding: 5px 10px;
+    color: white;
+    background: -webkit-linear-gradient(#bdbdbf, #888694, #bdbdbf);
+    /* Safari 5.1- 6.0 */
+    background: -o-linear-gradient(#bdbdbf, #888694, #bdbdbf);
+    /* Opera 11.6-12.0 */
+    background: -moz-linear-gradient(#bdbdbf, #888694, #bdbdbf);
+    /* Firefox 3.6-15 */
+    background: linear-gradient(#bdbdbf, #888694, #bdbdbf);
+    /* Standard syntax */
+}
+.proj-details p{
+	width: 278;
+}
+.tech_images {
+    padding: 15px 0px 0px 12px;
+}
+
+.tech_images li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.tech_images img {
+    width: 40px;
+    height: 40px;
+}
+.proj-details button {
+    background-color: green;
+    color:white;
+    border:solid 1px black;
+    border-radius: 3px;
+    padding:5px;
+    margin: 10px 100px;
+    font-weight: 900;
+}
+
+/*
+    
+  
+ #projects {
+       
+        height: 570px;
+        display : inline-block;
+        background-color: lightgray;
+        vertical-align: top;
+        background: -webkit-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Safari 5.1- 6.0 */
+
+*/
+/* background: -o-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Opera 11.6-12.0 */
+
+
+/*background: -moz-linear-gradient(to bottom right, #fefefe, #dbcbda); /* Firefox 3.6-15 */
+
+
+/*background: linear-gradient(to bottom right, #fefefe, #dbcbda); /* Standard syntax }*/
+
+
+/*   
+.project div{
+    width: 250;
+    height:450;
+    display: inline-block;
+}
+    
+    .project img{
+        height:auto;
+        width: 200px;
+        border: 5px solid lightgrey;
     }
-    #bio div{
-       display:inline-block;
-       width:640px;
-       vertical-align: top;
+    
+    .projects ul {
+        width: 293px;
+        margin:0;
     }
-#projects{
-    height:600px;
-}
-footer{
-height: 100%
-}
+    
+    
+    .tech_images {
+        padding:15px 0px 0px 12px;
+    }
+    .tech_images li{
+        display: inline-block;
+        margin-right:10px;
+    }
+    .tech_images img{
+        width:40px;
+        height:40px;
+    }
+    .projects button {
+        background-color: green;
+        color:white;
+        border:solid 1px black;
+        border-radius: 3px;
+        padding:5px;
+        margin: 10px 100px;
+        font-weight: 900;
+    }
+   
+    .footer{
+        width:968px;
+        height:50px;
+    }
+    .footer p
+    {
+        margin:auto;
+        width: 240px;
+    }
+    .footer ul {
+        width: 380px;
+        margin:auto;
+    }
+    .footer ul li {
+        display:inline-block;
+    }
+    .footer img {
+        width: 25px;
+        height:auto;
+        margin:auto;
+    }
+    .footer, .header{
+        background-color: #f9f9f9
+    }
+*/
