@@ -17,7 +17,7 @@
 /* --- Header style -- */
 
     .header{
-        height:130px;
+        height:120px;
         color:#d6d6d6;
         position : relative;
         top : 0px;
@@ -43,7 +43,7 @@
     img{
         height:auto;
         width:100%;
-        border-bottom:5px solid lightslategray;
+        border-bottom:6px solid #363636;
 
     }
 
@@ -69,6 +69,7 @@
         border-right:3px solid #363636;
     }
 
+
     .nav li:after {
         content: "\00BB";
     }
@@ -87,6 +88,10 @@
 
     .nav a{ 
         text-decoration: none;
+        color:#999999;
+    }
+
+    .nav li:first-child a{
         color:#d6d6d6;
     }
     
@@ -107,18 +112,22 @@
         height:auto;
         float: left;
         border:none;
+        margin-right:10px;
         
 
     }
-    .content-area-top h3{
-        color:#dc7327;
-       margin-left:40px;
+    .content-area-top h2{
+        color:#eb7226;
+        font-family: "Times New Roman", Georgia, Serif;
+        font-weight: normal;
+        padding-left:15px;
+        
         
     }
     .content-area-top p{
-        color:#d6d6d6;
-        width:220px;
-        padding-left:50px;
+        color:#c2c2c2;
+        width:205px;
+        padding-left:65px;
        
     }
 /* --- content-area-bottom  style  -- */
