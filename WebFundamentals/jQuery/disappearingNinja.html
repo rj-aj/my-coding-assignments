@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disapperinag Ninjas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        div {
+            width: 650px;
+            margin-left: 40px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+        }
+        button{
+            background-color: green;
+            margin-left: 40px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("img").click(function(){
+                $(this).hide("slow");
+                $("button").click(function(){
+                    $("img").show();
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>jQuery - assignment 1</h1>
+        <img id="ninja-img1" src="python.png">
+        <img id="ninja-img2" src="python.png">
+        <img id="ninja-img3" src="python.png">
+        <img id="ninja-img4" src="python.png">
+        <img id="ninja-img5" src="python.png">
+        <img id="ninja-img6" src="python.png">
+        <img id="ninja-img7" src="python.png">
+        <img id="ninja-img8" src="python.png">
+    </div>
+    <button>Restore</button>
+</body>
+
+</html>

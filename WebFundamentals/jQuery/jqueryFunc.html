@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Functions Assignment</title>
+    <style>
+        #book {
+            background: #de9a44;
+            margin: 3px;
+            width: 80px;
+            height: 40px;
+            display: none;
+            float: left;
+          }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function () {
+                alert("invoked the .click function ");
+            });
+
+            //.hide() Description: Hide the matched elements.
+            $('a').click(function () {
+                $(this).hide();
+            });
+            //.show() Description: show the matched elements.
+            $('#btn-show').click(function () {
+                $('#target').show();
+            });
+
+            //.toggle Description: Display or hide the matched elements.
+
+            $("#btn-toggle").click(function () {
+                $("p").toggle();
+            });
+
+      
+
+        //.slideDown( [duration ] [, complete ] )
+        $( "#clickme" ).click(function() {
+            $( "#book" ).slideDown( 1000, function() {
+                $( this )
+                  .css( "border", "2px red inset" )
+            });
+        });
+
+
+        });
+    </script>
+</head>
+
+<body>
+    <h2>.click() function</h2>
+    <button id="btn">Click</button>
+    <span>Click the button to alert message </span>
+    <hr>
+    <h2>.hide() function</h2>
+    <a id="target" href="#">Hide me by clicking</a>
+    <button id="btn-show">Click to Show</button>
+    <span>Description: Hide and Show the matched elements.</span>
+    <hr>
+    <h2>Description: Display or hide the matched elements.</h2>
+    <button id="btn-toggle">Toggle</button>
+    <p>Hello</p>
+    <p style="display: none">Good Bye slideDown .slideUp .slideToggle .fadeIn .fadeOut .addClass .before .after .append .html .attr .val .text .data
+    </p>
+    <hr>
+    <button id="clickme"> Click to Slide Down </button>
+      <img id="book" src="python.png" alt="" width="100" height="123">
+      
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Ninja To Cat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        div {
+            width: 650px;
+            margin-left: 40px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+        }
+
+        button {
+            background-color: green;
+            margin-left: 40px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("img").click(function () {
+                $(this).hide("slow");
+                $("button").click(function () {
+                    $("img").show();
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>jQuery - assignment 1</h1>
+        <img id="ninja-img1" src="img/ninja0.png">
+        <img id="ninja-img2" src="img/ninja1.png">
+        <img id="ninja-img3" src="img/ninja2.png">
+        <img id="ninja-img4" src="img/ninja3.png">
+        <img id="ninja-img5" src="img/ninja4.png">
+        <img id="cat-img1" src="img/cat0.png">
+        <img id="cat-img2" src="img/cat1.png">
+        <img id="cat-img3" src="img/cat2.png">
+        <img id="cat-img4" src="img/cat3.png">
+        <img id="cat-img5" src="img/cat4.png">
+        
+    </div>
+    <button>Restore</button>
+</body>
+
+</html>
