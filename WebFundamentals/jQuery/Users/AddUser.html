@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        table.blueTable {
+            border: 1px solid #1C6EA4;
+            background-color: #EEEEEE;
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+        }
+
+        table.blueTable td,
+        table.blueTable th {
+            border: 1px solid #AAAAAA;
+            padding: 3px 2px;
+        }
+
+        table.blueTable tbody td {
+            font-size: 13px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('#formSubmit').click(function(){
+                var firstName = ($( "input[name='firstname']" ).val());
+                var lastName =($( "input[name='lastname']" ).val());
+                var emailId = ($( "input[name='email']" ).val());
+                var contactNo=($( "input[name='contact']" ).val());
+                var htmlStr="<tr><td>"+ firstName + "</td><td>"+ lastName + "</td><td>"+ emailId + "</td><td>"+ contactNo + "</td></tr>";
+                $('table tbody').append(htmlStr);
+                return false;
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <h1>User Table</h1>
+    <table class="blueTable">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Contact# </th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+        <form>
+            First name:
+            <input type="text" name="firstname">
+            <br>
+            <br>
+            Last name:
+            <input type="text" name="lastname">
+            <br>
+            <br>
+            EmailAdd:
+            <input type="email" name="email">
+            <br>
+            <br>
+            Contact #:
+            <input type="number" name="contact">
+            <br>
+            <br>
+            <input id ="formSubmit" type="submit" value="Add User">
+        </form>
+</body>
+
+</html>

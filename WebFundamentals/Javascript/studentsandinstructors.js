@@ -1,20 +1,33 @@
-var students = [ 
-    {first_name:  'Michael', last_name : 'Jordan'},
-    {first_name : 'John', last_name : 'Rosales'},
-    {first_name : 'Mark', last_name : 'Guillen'},
-    {first_name : 'KB', last_name : 'Tonel'}
+var students = [{
+        first_name: 'Michael',
+        last_name: 'Jordan'
+    },
+    {
+        first_name: 'John',
+        last_name: 'Rosales'
+    },
+    {
+        first_name: 'Mark',
+        last_name: 'Guillen'
+    },
+    {
+        first_name: 'KB',
+        last_name: 'Tonel'
+    }
 ];
 
 
-function studentName_Print(students){
-for (var i = 0; i<=students.length; i++ ){
-    
-    
-    console.log( (i+1) + " - " + students[i].first_name + "  " + students[i].last_name);
-}
+function studentName_Print(students) {
+    for (var i = 0; i <= students.length; i++) {
+
+
+        console.log((i + 1) + " - " + students[i].first_name + "  " + students[i].last_name);
+    }
 }
 
 studentName_Print(students);
+
+
 
 
 /*Create a program that outputs:
