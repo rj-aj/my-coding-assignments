@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon Sprite Images</title>
+    <style>
+  li, p{
+        display:inline;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+        <script>
+            $(document).ready(function(){
+                for(var i=0; i<= 50; i++){
+               $.get("https://pokeapi.co/api/v2/pokemon/"+i,function(response){
+                   console.log(response);
+                $('ul').append("<li> <img src='"+response.sprites.front_default+"'> </li>" + "<p>"+response.name+"</p>")
+               },"json");
+                     
+                }
+                            
+            });
+            </script>
+</head>
+<body>
+    
+    <h1>Pokemon Sprite Images</h1>
+    <ul>
+        <li></li>
+    </ul>
+</body>
+</html>
