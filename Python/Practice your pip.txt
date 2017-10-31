@@ -1,0 +1,50 @@
+
+ 1. pip install Django
+
+—— Django installed successfully
+
+—- Collecting Django
+  Downloading Django-1.11.6-py2.py3-none-any.whl (6.9MB)
+    100% |████████████████████████████████| 7.0MB 162kB/s 
+Requirement already satisfied: pytz in /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python (from Django)
+Installing collected packages: Django
+Successfully installed Django-1.11.6
+
+2. pip list
+
+—- Pip list displays a list of packages installed.It is a list of everything installed in site-packages.
+
+3.  pip install Django (again)
+
+Requirement already satisfied: Django in /Library/Python/2.7/site-packages
+Requirement already satisfied: pytz in /System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python (from Django)
+
+4. pip freeze (What's the difference between freeze and list?): 
+
+
+pip list  : List installed packages, including editables.
+pip freeze : Output installed packages in requirements format.
+
+differences:
+
+Output format, freeze gives us the standard requirement format that may be used later with pip install -r to install requirements from.
+Output content, pip list include editables which pip freeze does not.
+
+5. pip freeze > requirements.txt
+
+—- Creates requirements.txt file.
+
+
+6. pip uninstall Django
+
+—- Lists all the files that pip will uninstall when it removes the packages and asks for confirmation.
+
+
+7. pip show Django
+
+—- shows nothing since we already uninstall Django with the previous command (pip uninstall Django)
+
+8. pip search Flask
+
+Returns a list of every package with Flask in the name or description.
+ 
