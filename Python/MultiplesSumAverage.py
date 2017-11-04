@@ -29,16 +29,5 @@ for i in numList:
 print sum
 average = sum/numOfnum
 print "average", average
-word = "Python"
-print[:2]
 
-my_dict = {
-    'key1': 'value1',
-    'key2': 'value2',
-    'key3': 'value3'
-    }
-for item in my_dict:
-    print item
 
-for key, value in my_dict.iteritems():
-    print key, value
