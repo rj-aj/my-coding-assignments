@@ -18,3 +18,12 @@ if (len(str) >= 50):
     print "Long sentence"
 elif (len(str) < 50):
     print "Short sentence"
+
+#List
+#If the length of the list is greater than or equal to 10 print "Big list!" 
+# If the list has fewer than 10 values print "Short list."
+my_list=[1,2,3,4,5,6,"hello","worls","RJ",7,8,9,10]
+if (len(my_list) >= 10):
+    print "Big List !"
+elif (len(my_list < 10)):
+    print "Short list."
