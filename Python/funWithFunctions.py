@@ -46,4 +46,15 @@ arr1=[10, 20, 50, 80 ]
 arr2=multiply(arr1, 5)
 print "New List : ", arr2
 
+def layered_multiples(arr):
+    print arr
+    new_array = []
+    for num in arr:
+        temp_arr = []
+        for index in range(0,num):
+            temp_arr.append(1)
+        new_array.append(temp_arr)
+    return new_array
 
+x = layered_multiples(multiply([2,4,5],3))
+print x
