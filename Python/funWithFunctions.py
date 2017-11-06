@@ -42,7 +42,6 @@ Write a function that takes the multiply function call as an argument.
 Your new function should return the multiplied list as a two-dimensional list. 
 Each internal list should contain the 1's times the number in the original list.
 """
-
 def multiply(my_list, multiple):
     new_list=[]
     for i in my_list:
