@@ -1,27 +1,32 @@
-//Multiples of Three – but Not All
-// Using FOR, print multiples of 3 from -300 to 0. Skip -3 and -6.<<!DOCTYPE html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Muit</title>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+//Multiples of Three – but Not All // Using FOR, print multiples of 3 from -300 to 0. Skip -3 and -6.
+<<!DOCTYPE html>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Muitples of three</title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
         <script>
-            $(document).ready(function(){
-             
-    
+            $(document).ready(function () {
+
+
+                var num = -300;
+                for (var i = -300; i <= 0; i--) {
+                    num = num - i;
+                    if (num % 3 == 0) {
+                        if ((num === 6) && (num === 3)) {
+                            console.log(num);
+                        }
+                    }
+                }
+            });
+        </script>
+</head>
+<body>
 </body>
 </html>
-var num = -300;
-for (var i = -300; i <= 0; i--) {
-    num = num - i;
-    if (num % 3 == 0) {
-          if ((num === 6) && (num === 3)) {
-            console.log(num);
-        }
-    }
-}
