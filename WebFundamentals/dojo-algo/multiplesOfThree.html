@@ -1,4 +1,7 @@
-//Multiples of Three – but Not All // Using FOR, print multiples of 3 from -300 to 0. Skip -3 and -6.
+//Multiples of Three – but Not All 
+// Using FOR, print multiples of 3 from -300 to 0. 
+//Skip -3 and -6.
+
 <<!DOCTYPE html>
     <!DOCTYPE html>
     <html lang="en">
@@ -13,20 +16,19 @@
 
         <script>
             $(document).ready(function () {
-
-
-                var num = -300;
-                for (var i = -300; i <= 0; i--) {
-                    num = num - i;
-                    if (num % 3 == 0) {
-                        if ((num === 6) && (num === 3)) {
-                            console.log(num);
+                for (var i = -300; i <= 0; i++) {
+                    if ((i % 3) == 0) {
+                        if ((i != -3) && (i != -6)) {
+                            console.log(i);
                         }
                     }
                 }
+
             });
         </script>
-</head>
-<body>
-</body>
-</html>
+    </head>
+
+    <body>
+    </body>
+
+    </html>
