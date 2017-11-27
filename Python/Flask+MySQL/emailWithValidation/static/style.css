@@ -1,0 +1,30 @@
+.message {
+    width: 30%;
+    
+}
+
+.error_msg {
+    color: white;
+    background: red;
+    text-align: center;
+}
+.success_msg {
+    color: white;
+    background: green;
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+
+.delete {
+    width: 40px;
+    font-size: 10px;
+    text-align: center;
+
+}
+#email{
+    margin: 100px auto;
+}

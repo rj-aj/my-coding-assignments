@@ -12,13 +12,25 @@ def result():
     dojo_location = request.form['dojo_location']
     fav_language = request.form['fav_language']
     comment = request.form['comment']
-    if len(name)<1:
-        flash("Name cannot be empty!") # just pass a string to the flash function
-    if len(comment)<1:
-        flash("comment cannot be empty!") # just pass a string to the flash function
-    elif len(comment)>120:
-        flash("comment cannot be longer thatn 120 characters. Please delete some words and resubmit")
-    return render_template("submit.html", name=name, dojo_location=dojo_location, fav_language=fav_language, comment=comment)
+    error = False
+    if not name:
+        flash('Name is required.')
+        error = True
+    if not comment:
+        flash('Comment is required.')
+        error = True
+    if len(comment) > 120:
+        flash('Comment must be shorter than 120 characters.')
+        error = True
+    if error:
+        return redirect('/')
+    return render_template('submit.html',
+                           name=name,
+                           dojo_location=dojo_location,
+                           fav_language=fav_language,
+                           comment=comment)
 
+
+app.run(debug=True)
 
 app.run(debug=True)

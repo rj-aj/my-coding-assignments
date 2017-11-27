@@ -9,18 +9,26 @@
 </head>
 
 <body>
-    <div id="container">
+    <h1>Assignment: Dojo Survey</h1>
+    <p>This assignment shows how flask can serve interactive content.</p>
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+    <p class='red'>{{message}}</p>
+    {% endfor %}
+    {% endwith %}
         <form action="/results" method="post">
-            Name:
-            <input type="text" name="name"> Dojo Location:
-            <select name="dojo_location">
+            <form class="" action="/result" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" name="name" id="name">
+                <label for="dojo_location">Dojo Location:</label>
+                <select  name="dojo_location" id="dojo_location">
                 <option value="Washington">Washington</option>
                 <option value="Dallas">Dallas</option>
                 <option value="San Jose">San Jose</option>
                 <option value="Seattle">Seattle</option>
             </select>
             Favorite Language:
-            <select name="fav_language">
+            <select name="fav_language" id="fav_language">
                 <option value="JavaScript">JavaScript</option>
                 <option value="Python">Python</option>
                 <option value="Ruby">Ruby</option>
@@ -28,19 +36,9 @@
             </select>
             Comment (optional):
             <textarea rows="6" cols="40" name="comment"></textarea>
-            <button>
-                <input type='submit'>
-
-            </button>
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-              {% for message in messages %}
-                <p>{{message}}</p>
-              {% endfor %}
-            {% endif %}
-           {% endwith %}
+            <input class="button" type="submit" value="Submit">
         </form>
-    </div>
+  
 </body>
 
 </html>
