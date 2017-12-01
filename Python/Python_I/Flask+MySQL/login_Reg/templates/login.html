@@ -1,0 +1,36 @@
+<div class="login">
+    <form>
+        <form class="" action="/login" method="POST">
+           
+            <p>Email: <input type="text" name="email"></p>
+            <p>Password: <input type="password" name="password"></p>
+          
+            <input type="submit" value="Login">
+            </form>
+    </form>
+
+
+    {% if session['id'] %} 
+    <div id="logout">
+        <form action="/logout" method="post">
+            <input class="btn" type="submit" value="Logout">
+        </form>
+    </div>
+    {% else  %} 
+    <div id="login">
+        <form action="/login" method="post">
+            <input class="formfield" type="text" name="email" onfocus="this.value=''" value="Enter your email"> 
+            <input class="formfield" type="text" name="password" onfocus="this.value=''" value="Enter your password">
+            <input class="btn" type="submit" value="Log In">
+        </form>
+        {% with messages = get_flashed_messages(category_filter=["login"]) %}
+            {% if messages %}
+                {% for message in messages %}
+                    <p class="error">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    {% endif %} 
+</div>
