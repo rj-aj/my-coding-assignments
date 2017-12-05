@@ -38,7 +38,7 @@ class CallCenter(object):
        
 callcenter = CallCenter()
 callcenter.add(Call(1, "Anne", "309-709-1091", "4:00", "Doc.Appt."))
-callcenter.add(Call(2, "Mary", "309-7089-1001", "5:00", "Meeting"))
+callcenter.add(Call(2, "Mary", "309-708-1001", "5:00", "Meeting"))
 callcenter.info()
-callcenter.remove_number("858-928-9271")
+callcenter.remove_number("309-908-1002")
 callcenter.info()
