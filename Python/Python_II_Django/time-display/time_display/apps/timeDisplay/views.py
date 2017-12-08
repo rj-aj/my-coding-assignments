@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponse, redirect
-from datetime import datetime
+from time import gmtime, strftime
 # Create your views here.
 def index(request):
     context = {
-        "time": datetime.now().strftime("%Y-%m-%d %H:%M %p")
+        "time": strftime("%a, %d-%b-%Y-%H:%M %p", gmtime())
     }
     return render(request, 'timeDisplay/index.html', context)
