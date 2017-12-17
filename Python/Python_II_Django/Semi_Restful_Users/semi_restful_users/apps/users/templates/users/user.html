@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+		<title>Add User</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'users/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+	</head>
+	<body>
+            <a href="/users">Back to All Users</a>
+            <div class="container">
+            <h1>User: {{ user.first_name}} {{user.last_name}}</h1>
+            
+            <p><strong>First Name: </strong>{{ user.first_name}} </p>
+            <p><strong>Last Name: </strong>{{user.last_name}} </p>
+            <p><strong>Email: </strong>{{user.email}} </p>
+            <p><strong>Joined::</strong> {{user.created_at}} </p>
+            <p><strong>Last Updated::</strong> {{user.updated_at}} </p>
+            <p><a href="/users/{{ user.id }}/edit">Edit</a> | <a href="/users/{{ user.id }}/destroy">Delete</a></p>
+        </div>
+    </body>
+</html>

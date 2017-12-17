@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+		<title>Edit User</title>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'users/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+	</head>
+	<body>
+            <div class="container">
+                    <h1>Edit User {{ user.id }}</h1>
+                    <h4>Last Updated: {{ user.updated_at }}</h4>
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li class="error">
+                    {{ message }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form action="/users/{{ user.id }}/update" method='POST'>
+                {% csrf_token %}
+                First Name: <input type="text" name="first_name" value="{{user.first_name}}"/> <br /><br />
+                Last Name: <input type="text" name="last_name" value="{{user.last_name}}"/><br /><br />
+                Email: <input type="text" name="email" value="{{user.email}}"/><br /><br />
+                <input type="hidden" name="id" value="{{user.id}}" />
+                <input class = "btn" type="submit" value="Update" /> <br /><br />
+                <button class = "btn"><a href="/users/{{ user.id }}">Show | </a> </button>
+                <button class = "btn"><a href="/users"> Go Back </a> </button>
+
+            </form>
+    </body>
+</html>
