@@ -1,6 +1,6 @@
 from __future__ import unicode_literals
 from django.db import models
-from datetime import date, datetime, timedelta
+from datetime import datetime
 import bcrypt, re
 
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9\.\+_-]+@[a-zA-Z0-9\._-]+\.[a-zA-Z]*$')
@@ -33,18 +33,17 @@ class UserManager(models.Manager):
                 break
 
         # check length of name fields
-        if len(post_data['first_name']) < 2 or len(post_data['last_name']) < 2:
+        if len(post_data['name']) < 2 or len(post_data['alias']) < 2:
             errors.append("name fields must be at least 3 characters")
-
         # check length of name password
         if len(post_data['password']) < 8:
             errors.append("password must be at least 8 characters")
 
         # check name fields for letter characters            
-        if not re.match(NAME_REGEX, post_data['first_name']) or not re.match(NAME_REGEX, post_data['last_name']):
+        if not re.match(NAME_REGEX, post_data['name']):
             errors.append('name fields must be letter characters only')
 
-        # check emailness of email
+        # check for validity of email
         if not re.match(EMAIL_REGEX, post_data['email']):
             errors.append("invalid email")
 
@@ -55,20 +54,6 @@ class UserManager(models.Manager):
         # check password == password_confirm
         if post_data['password'] != post_data['password_confirm']:
             errors.append("passwords do not match")
-        # class datetime.timedelta
-        # A duration expressing the difference between two date, time, or datetime instances to microsecond resolution.
-        minage = timedelta(days=365*10)
-        try:
-            converted = datetime.strftime(post_data['birthday'], '%Y-%m-%d')
-            print "converted", converted
-            # check valid birthdate (year) must be less than current year
-            if converted >= datetime.now():
-                errors.append("Please provide a valid date for birthday field")
-            # check birthdate for adult users 
-            elif datetime.now() - converted < minage:
-                errors.append("Must be over 16 to register")
-        except:
-            pass
 
         if not errors:
             # make our new user
@@ -77,9 +62,8 @@ class UserManager(models.Manager):
 
             new_user = self.create(
                 first_name=post_data['first_name'],
-                last_name=post_data['last_name'],
+                alias=post_data['alias'],
                 email=post_data['email'],
-                birthday = post_data['birthday'],
                 password=hashed
             )
             return new_user
@@ -87,11 +71,10 @@ class UserManager(models.Manager):
 
 # Create your models here.
 class User(models.Model):
-    first_name = models.CharField(max_length = 255)
-    last_name = models.CharField(max_length = 255)
+    name = models.CharField(max_length = 100)
+    alias = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     password= models.CharField(max_length=255)
-    birthday = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = UserManager()
