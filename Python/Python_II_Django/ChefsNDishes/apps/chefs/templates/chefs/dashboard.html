@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'chefs/style.css' %}">
+</head>
+<body>
+    <h1>YOU ARE SUCCESS, {{ user.first_name }}</h1>
+    <div class="container">
+        <nav>
+            <a href="/logout">Logout</a>
+        </nav>
+        <h2>Add a Dish</h2>
+        <form action="{% url 'create' %}" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Dish Name</label>
+                <input class="form-control" type="text" name="name">
+            </div>
+            <input type="submit" value="Add Dish">
+        </form>
+        <h1>CHECK OUT THE LAST LIKED DISH</h1>
+        <h2>{{ most_recently_liked }}</h2>
+        <h2>Your Dishes</h2>
+        {% for dish in users_dishes %}
+        <p>{{dish}}</p>
+        {% endfor %}
+        <h2>Dishes you have liked</h2>
+        {% for dish in faved_dishes %}
+        <p>{{dish}} </p>
+        {% endfor %}
+        <h2>Dishes you have not liked</h2>
+        {% for dish in not_been_faved %}
+            <p>{{dish}} <a href="/favorite/{{ dish.id }}">Like this</a></p>
+        {% endfor %}
+    </div>
+</body>
+</html>
