@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Basics II</title>
+</head>
+
+<body>
+    <script>
+        /*
+                    function magic_multiply(x, y){
+                    x = x*y
+                    return x;
+                }
+                let test1 = magic_multiply(5, 2);
+                console.log(test1);
+                // => 10
+
+                let test2 = magic_multiply(0, 0);
+                console.log(test2);
+                // => "All inputs 0"
+                */
+        function magic_multiply(x, y) {
+            console.log('yyyyy:', y);
+            if (Array.isArray(x)) {
+                console.log("True")
+                let sum = 0;
+                for (let i = 0; i < x.length; i++) {
+                    x[i] = x[i] * y;
+                }
+            } else if ((Number.isInteger(x)) && (Number.isInteger(y))) {
+                x = x * y
+             
+            }
+            else if ((typeof(x) === 'string')){
+                console.log("value of x before:",x);
+                console.log("string");
+                let tempstr = '';
+                for(let i=0; i<=y; i++){
+                    console.log('iiii:',i);
+                    tempstr += x;
+                    
+                }
+                x = tempstr;
+                // console.log(x)
+            }
+            
+                
+             
+            
+            else {
+                console.log("Error: Can not multiply by string");
+            }
+            console.log();
+            return x;
+        }
+        /*
+        let test1 = magic_multiply(5, 2);
+                console.log(test1);
+                // => 10
+
+                let test2 = magic_multiply(0, 0);
+                console.log(test2);
+                // => "All inputs 0"
+                console.log();
+        let test3 = magic_multiply([1, 2, 3], 2);
+        console.log(test3);
+        console.log();
+        let test4 = magic_multiply(7, "three");
+       console.log(test4);
+        // => "Error: Can not multiply by string"
+        console.log();
+        */
+       let test5 = magic_multiply("Brendo", 4);
+       console.log(test5);
+       console.log();
+        // => "BrendoBrendoBrendoBrendo"
+
+        /*
+        Test 1
+        In order to make this test pass, we will need to add logic to magic_multiply. 
+        Whenever we call magic_multiply for 5 and 2, the returned result should always be 10. 
+        Remember, we must use these specific inputs!
+
+        <body>
+            function magic_multiply(x, y){
+            x = x*y
+            return x;
+        }
+        let test1 = magic_multiply(5, 2);
+        console.log(test1);
+        */
+    </script>
+</body>
+
+</html>
