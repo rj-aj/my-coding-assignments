@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Basics I</title>
+</head>
+<body>
+        <p>Basic 1</p>
+    <ul>************************
+         <li> Create a variable x as an empty array []. Log this array to your console.</li>
+          <li>  Use .push() to add three strings to your array: 'coding', 'dojo', 'rocks'.</li>
+          <li>  Use .pop() to remove the final element of your array.</li>
+          <li>  Log the final value of x, what is it?</li>
+    </ul>
+        <p>Answer : x[0]='coding' and x[1]='dojo'</p>
+    <script>
+    let x = [];
+    console.log(x);
+    x.push( 'coding', 'dojo', 'rocks');
+    x.pop();
+    console.log(x);
+    </script>
+    <p>************************</p>
+    <p>Basic 2</p>
+    <ul>
+        <li>Create a const called y, and store an empty array there. Log this to your console.</li>
+       <li>Use .push() to add the number 88 to array y.</li>
+            <li>What happened?</li>
+    </ul>
+    <p>Answer : y[0]= 88</p>
+    <script>
+    const y = [];
+    y.push(88);
+    console.log(y);
+    </script>
+     <p>************************</p>
+     <p>Basic 3</p>
+     <ul>
+        <li>  Create a variable z that contains the array [9, 10, 6, 5, -1, 20, 13, 2].</li>
+       <li>Print every element to the console.</li> 
+       <li> Now print every element except the final number.</li>
+    </ul>
+   
+    <p>Answer 1:</p>
+    <ul id="basic3">
+    </ul>
+    <p>Answer 2:</p>
+    <ul id="basic_3">
+    </ul>
+    <script>
+    let z = [9, 10, 6, 5, -1, 20, 13, 2];
+    for(let i =0; i< z.length; i++){
+        console.log(z[i]);
+        let new_item = document.createElement("li");
+        new_item.innerHTML=(z[i])
+        document.getElementById("basic3").appendChild(new_item);
+    }
+    for(let i =0; i< (z.length)-1; i++){
+        console.log(z[i]);
+        let item2 = document.createElement("li");
+        item2.innerHTML= (z[i]);
+        document.getElementById("basic_3").appendChild(item2);
+    }
+    </script>
+     <p>************************</p>
+     <p>Basic 4</p>
+     <ul>
+         <li>Create a variable names and store the array ['Kadie', 'Joe', 'Fritz', 'Pierre', 'Alphonso']</li>
+         <li>Print the length of all names to the console.</li>
+         <li> Now modify your code so only names with a length of 5 print.</li>
+       </ul>
+       <p>Answer:</p>
+       <script>
+       let names=['Kadie', 'Joe', 'Fritz', 'Pierre', 'Alphonso']
+       for(let i =0; i< names.length; i++){
+           let name_len = names[i].length;
+           console.log ("length of name "+ (i+1) +" : " + name_len);
+           
+       }
+       for(let i =0; i< names.length; i++){
+           let name_len = names[i].length;
+           if (name_len == 5){
+               let name = names[i]
+               console.log("names with length 5 is : " + name);
+           }
+           
+       }
+       
+
+       </script>
+</body>
+</html>
