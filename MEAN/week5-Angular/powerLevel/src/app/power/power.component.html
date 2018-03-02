@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row main">
+    <fieldset>
+      <legend>Power Component </legend>
+      <h2>Initial Power Level: </h2>
+      <input type="number" min="1" max="100" value="1" [(ngModel)]='powerLvl'>
+      <button (click)="update()">Calculate Powers</button>
+    </fieldset>
+  </div>
+  <fieldset>
+    <legend></legend>
+    <div class="row">
+      <div class="col-md-4">
+        <app-human [powerLvl]="powerLvl"> </app-human>
+      </div>
+      <div class="col-md-4">
+        <app-saiyan [powerLvl]="powerLvl"> </app-saiyan>
+      </div>
+      <div class="col-md-4">
+        <app-super-saiyan [powerLvl]="powerLvl"></app-super-saiyan>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <app-super-saiyan-two [powerLvl]="powerLvl"></app-super-saiyan-two>
+      </div>
+      <div class="col-md-4">
+        <app-super-saiyan-three [powerLvl]="powerLvl"></app-super-saiyan-three>
+      </div>
+      <div class="col-md-4">
+        <app-super-saiyan-four [powerLvl]="powerLvl"></app-super-saiyan-four>
+      </div>
+    </div>
+  </fieldset>
+</div>

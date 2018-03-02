@@ -1,0 +1,32 @@
+<div class="container">
+<h3>Add a Quote</h3>
+  <form (submit)="quoteForm.valid && onSubmit($event, quoteForm)" #quoteForm='ngForm'>
+    <div>
+    <textarea type="text" name="quote" placeholder="Enter a new quote" [(ngModel)]='quote.quote' #errQuote="ngModel" minlength="4" required></textarea>
+      <p class="errors" *ngIf= "errQuote.errors && (errQuote.dirty || errQuote.touched)">
+        <span *ngIf="errQuote.errors.required">
+          Quote is required.
+        </span>
+        <span *ngIf="errQuote.errors.minlength">
+          Quote must be at least {{ errQuote.errors.minlength.requiredLength}} characters long.
+        </span>
+      </p>
+
+    </div>
+      <div class="author_div">
+      <label for="">Author</label>
+      <input type="text" name="author" minlength="1" required
+      #author="ngModel" [(ngModel)]="quote.author">
+      <p class="errors" *ngIf="author.errors &&(author.dirty || author.touched)">
+          <span *ngIf="author.errors.minlength">
+              Author must be at least {{ author.errors.minlength.requiredLength }} characters long.
+            </span>
+      </p>
+   </div>
+    <button type="submit" *ngIf="quoteForm.valid" class="btn btn-primary"> Add Quote </button>
+    </form>
+  </div>
+  {{ quote | json }}
+
+<app-quote-list [myQuotes]="quotes" (myEvent)="deleteQuote($event)"></app-quote-list>
+

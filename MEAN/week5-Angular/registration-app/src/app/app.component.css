@@ -1,0 +1,38 @@
+#form_wrapper{
+  width: 900px;
+  margin: 10px 0px;
+  padding: 10px;
+}
+input{
+ width: 200px;
+}
+div.errors{
+  font-size: 12px;
+  display: inline;
+  color: red;
+}
+label{
+  width: 150px;
+  text-align: right;
+}
+select.dropdown{
+  width: 200px;
+}
+form.radio{
+  display: inline-block;
+  width: 200px;
+}
+input.radio{
+  width: 20px;
+}
+button{
+  margin: 20px;
+  width: 50%;
+}
+p.green{
+  color: green;
+}
+span.email{
+  color: blue;
+  text-decoration: underline;
+}

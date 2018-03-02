@@ -1,0 +1,20 @@
+.errors {
+  color:red
+}
+div.container{
+  width: 500px;
+  margin: 20px 0px;
+}
+textarea{
+  width: 495px;
+  height: 100px;
+}
+button{
+  float: right;
+  clear: both;
+  margin: 10px 0px;
+}
+div.input{
+  margin: 10px 0px;
+  float: right;
+}

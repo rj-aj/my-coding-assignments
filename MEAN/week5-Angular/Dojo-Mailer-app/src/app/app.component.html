@@ -1,0 +1,28 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class = "container">
+<div style="text-align:center">
+  <h1>
+   {{ title }}!
+  </h1>
+  </div>
+ <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Email</th>
+      <th scope="col">Importance</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Content</th>
+    </tr>
+  </thead>
+<br>
+  <tbody>
+    <tr *ngFor='let email of emails'>
+      <td>{{ email.email | lowercase}}</td>
+      <td *ngIf='email.importance'>High</td>
+      <td *ngIf='!email.importance'>Low</td>
+      <td>{{ email.subject }}</td>
+      <td>{{ email.content }}</td>
+    </tr>
+</tbody>
+</table>
+</div>

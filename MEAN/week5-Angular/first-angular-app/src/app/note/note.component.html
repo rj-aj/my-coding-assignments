@@ -1,0 +1,5 @@
+<h3>
+ Note component !
+ {{ notes | json }}
+</h3>
+<app-note-list [myNotes]="notes" (myEvent)= "invoke($event)"></app-note-list>

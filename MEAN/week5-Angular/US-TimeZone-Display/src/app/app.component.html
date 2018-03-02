@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+<div class="container">
+  <div class="row" aria-label="US Timezone Button" style="text-align:center">
+    <button type= "button" class="btn btn-default" (click)="getDateByZone('PST')" [ngClass]="{lastClick: lastButtonClick === 'PST'}" > PST </button>
+    <button type= "button" class="btn btn-default" (click)="getDateByZone('MST')" [ngClass]="{lastClick: lastButtonClick === 'MST'}"> MST </button>
+    <button type= "button" class="btn btn-default" (click)="getDateByZone('CST')" [ngClass]="{lastClick: lastButtonClick === 'CST'}"> CST </button>
+    <button type= "button" class="btn btn-default" (click)="getDateByZone('EST')" [ngClass]="{lastClick: lastButtonClick === 'EST'}"> EST </button>
+    <button type="button" class="btn btn-default" (click)="clearAll()"> Clear </button>
+
+
+
+    <br>
+    <h2> {{ timeNow | date:'medium'}} </h2>
+  </div>
+</div>
